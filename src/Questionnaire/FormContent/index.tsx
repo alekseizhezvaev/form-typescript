@@ -12,7 +12,7 @@ import { checkIsValid } from '../validate';
 import { QuestionnarieFormType } from '../QuestionnarieFormType';
 
 import styles from './styles/FormContent.module.scss';
-import { PolicyModal } from './PolicyModal';
+import { PrivacyModal } from './PrivacyModal';
 
 export const FormContent: React.FC = () => {
   const { values, isSubmitting } = useFormikContext<QuestionnarieFormType>();
@@ -20,7 +20,7 @@ export const FormContent: React.FC = () => {
 
   return (
     <div className={styles.FormContent}>
-      <div className={styles.Title}>Анкета соискателя</div>
+      <div className={styles.FormContent__title}>Анкета соискателя</div>
 
       <FormItem title="Личные данные">
         <FieldInput<QuestionnarieFormType>
@@ -48,7 +48,10 @@ export const FormContent: React.FC = () => {
         title={
           /** @Warn как указано в макете, эта ошибка указывается сразу при инициализации формы (начальное значение - не выбрано) */
           <div>
-            Пол * {!values.gender ? <span className={styles.Error}>укажите пол</span> : null}
+            Пол *{' '}
+            {!values.gender ? (
+              <span className={styles.FormContent__formItem__error}>укажите пол</span>
+            ) : null}
           </div>
         }
       >
@@ -73,12 +76,12 @@ export const FormContent: React.FC = () => {
         />
       </FormItem>
 
-      <div className={styles.Privacy}>
+      <div className={styles.FormContent__privacy}>
         <FieldCheckbox<QuestionnarieFormType> name="isPrivacyPolicy" />
 
         <div>
           * Я согласен с{' '}
-          <span className={styles.Button} onClick={modalHandler.onOpenModal}>
+          <span className={styles.FormContent__privacy__button} onClick={modalHandler.onOpenModal}>
             политикой конфиденциальности
           </span>
         </div>
@@ -88,7 +91,7 @@ export const FormContent: React.FC = () => {
         Отправить
       </Button>
 
-      {modalFlag ? <PolicyModal onCloseModal={modalHandler.onCloseModal} /> : null}
+      {modalFlag ? <PrivacyModal onCloseModal={modalHandler.onCloseModal} /> : null}
     </div>
   );
 };

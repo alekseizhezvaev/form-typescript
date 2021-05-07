@@ -5,13 +5,13 @@ import { useFormikContext } from 'formik';
 import { Modal } from '../../../uikit/Modal';
 import { QuestionnarieFormType } from '../../QuestionnarieFormType';
 
-import styles from './styles/PolicyModal.module.scss';
+import styles from './styles/PrivacyModal.module.scss';
 
 type Props = {
   onCloseModal: VoidFunction;
 };
 
-export const PolicyModal: React.FC<Props> = ({ onCloseModal }) => {
+export const PrivacyModal: React.FC<Props> = ({ onCloseModal }) => {
   const { setFieldValue } = useFormikContext<QuestionnarieFormType>();
 
   const handleSetPolicy = useCallback(() => {
@@ -25,7 +25,7 @@ export const PolicyModal: React.FC<Props> = ({ onCloseModal }) => {
       title="Политика конфиденциальности"
       onActionClick={handleSetPolicy}
     >
-      <div className={styles.PolicyModal__content}>
+      <div className={styles.PrivacyModal__content}>
         <b>1. Общие положения</b>
         <br />
         Настоящая политика обработки персональных данных составлена в соответствии с требованиями
