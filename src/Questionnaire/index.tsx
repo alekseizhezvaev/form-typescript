@@ -40,17 +40,15 @@ export const Questionnaire: React.FC = () => {
   );
 
   return (
-    <>
-      <Formik<QuestionnarieFormType>
-        initialValues={initialValues}
-        onSubmit={handleSubmit}
-        validationSchema={questionnaireFormSchema}
-      >
-        <Form>
-          <FormContent />
-          {modalFlag ? <FormModal onCloseModal={modalHandler.onCloseModal} /> : null}
-        </Form>
-      </Formik>
-    </>
+    <Formik<QuestionnarieFormType>
+      initialValues={initialValues}
+      onSubmit={handleSubmit}
+      validationSchema={questionnaireFormSchema}
+    >
+      <Form>
+        <FormContent />
+        {modalFlag ? <FormModal onCloseModal={modalHandler.onCloseModal} /> : null}
+      </Form>
+    </Formik>
   );
 };
