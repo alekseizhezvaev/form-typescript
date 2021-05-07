@@ -2,11 +2,11 @@
   margin-top: 48px;
   font-size: 22px;
 
-  .Title {
+  &__title {
     margin-bottom: 24px;
   }
 
-  .Content {
+  &__content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 48px;

@@ -1,9 +1,9 @@
 .Checkbox {
-  display: grid;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 
-  .Control {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+  &__container {
+    display: grid;
   }
 }

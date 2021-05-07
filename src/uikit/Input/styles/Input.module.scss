@@ -1,50 +1,50 @@
 .Input {
-  width: 256px;
-  font-size: 14px;
-  position: relative;
+  font-size: 16px;
+  margin-top: 2px;
+  padding: 8px 12px;
+  height: 40px;
+  outline: none;
+  transition: all 0.3s ease-in;
+  border-radius: 2px;
 
-  .Control {
-    font-size: 16px;
-    margin-top: 2px;
-    padding: 8px 12px;
-    height: 40px;
-    outline: none;
-    transition: all .3s ease-in;
-    border-radius: 2px;
+  &__container {
+    width: 256px;
+    font-size: 14px;
+    position: relative;
   }
 
-  .Default {
+  &_default {
     color: #595959;
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
 
     &:hover {
-      border: 1px solid #40A9FF;
+      border: 1px solid #40a9ff;
     }
 
     &:focus {
-      border: 1px solid #40A9FF;
+      border: 1px solid #40a9ff;
       box-shadow: 0px 0px 4px rgba(24, 144, 255, 0.5);
     }
 
     &::placeholder {
-      color: #BFBFBF;
+      color: #bfbfbf;
     }
   }
 
-  .Error {
-    border: 1px solid #F5222D;
-    color: #F5222D;
+  &_error {
+    border: 1px solid #f5222d;
+    color: #f5222d;
 
     &:focus {
-      border: 1px solid #F5222D;
+      border: 1px solid #f5222d;
       box-shadow: 0px 0px 4px rgba(245, 34, 45, 0.5);
     }
   }
 
-  .Text__error {
+  &__error__text {
     position: absolute;
     left: 0;
     top: 100%;
-    color: #F5222D;
+    color: #f5222d;
   }
 }

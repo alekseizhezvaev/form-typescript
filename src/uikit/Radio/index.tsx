@@ -8,8 +8,8 @@ type Props = {
 
 export const Radio: React.FC<Props> = ({ label, ...rest }) => {
   return (
-    <label className={styles.Radio}>
-      <input {...rest} className={styles.Control} type="radio" />
+    <label className={styles.Radio__container}>
+      <input {...rest} className={styles.Radio} type="radio" />
       <div>{label}</div>
     </label>
   );

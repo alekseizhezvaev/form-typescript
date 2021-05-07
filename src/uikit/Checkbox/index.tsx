@@ -8,8 +8,8 @@ type Props = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'classNa
 
 export const Checkbox: React.FC<Props> = ({ value, ...rest }) => {
   return (
-    <label className={styles.Checkbox}>
-      <input {...rest} className={styles.Control} value={String(value)} type="checkbox" />
+    <label className={styles.Checkbox__container}>
+      <input {...rest} className={styles.Checkbox} value={String(value)} type="checkbox" />
     </label>
   );
 };

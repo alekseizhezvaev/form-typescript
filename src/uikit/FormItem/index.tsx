@@ -9,8 +9,8 @@ type Props = {
 export const FormItem: React.FC<Props> = ({ title, children }) => {
   return (
     <div className={styles.Form}>
-      <div className={styles.Title}>{title}</div>
-      <div className={styles.Content}>{children}</div>
+      <div className={styles.Form__title}>{title}</div>
+      <div className={styles.Form__content}>{children}</div>
     </div>
   );
 };
