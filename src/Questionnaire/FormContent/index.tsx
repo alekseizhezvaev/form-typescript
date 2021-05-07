@@ -5,6 +5,7 @@ import { useFormikContext } from 'formik';
 import { FieldCheckbox } from '../../formikControls/FieldCheckbox';
 import { FieldInput } from '../../formikControls/FieldInput';
 import { FieldRadio } from '../../formikControls/FieldRadio';
+import { FieldUpload } from '../../formikControls/FieldUpload';
 import { useModal } from '../../hooks/useModal';
 import { Button } from '../../uikit/Button';
 import { FormItem } from '../../uikit/FormItem';
@@ -42,6 +43,8 @@ export const FormContent: React.FC = () => {
           placeholder="Электронная почта"
           type="text"
         />
+
+        <FieldUpload<QuestionnarieFormType> name="portfolio" />
       </FormItem>
 
       <FormItem

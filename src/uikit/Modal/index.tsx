@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 import usePortal from 'react-useportal';
 
+import { IconClose } from '../icons/IconClose';
 import { Button } from '../Button';
 
 import styles from './styles/Modal.module.scss';
-import { Icon } from './Icon';
 
 type Props = {
   actionButtonText: string;
@@ -38,7 +38,7 @@ export const Modal: React.FC<Props> = ({
         <div className={styles.Modal__container}>
           <div className={styles.Modal__content}>
             <button className={styles.Modal__content__close} onClick={onCloseModal} type="button">
-              <Icon />
+              <IconClose />
             </button>
             <div className={styles.Modal__content__title}>{title}</div>
             <div className={styles.Modal__content__main}>{children}</div>

@@ -17,6 +17,7 @@ export const questionnaireFormSchema = Yup.object().shape<QuestionnarieFormType>
     .oneOf(['male', 'female'] as const, 'укажите пол')
     .required('укажите пол'),
   isPrivacyPolicy: Yup.boolean().required('Обязательное поле'),
+  portfolio: Yup.mixed(),
 });
 
 const requiredSchema = Yup.object().shape<QuestionnarieFormType>({
@@ -27,6 +28,7 @@ const requiredSchema = Yup.object().shape<QuestionnarieFormType>({
     .oneOf(['male', 'female'] as const, 'укажите пол')
     .required('укажите пол'),
   isPrivacyPolicy: Yup.mixed().oneOf([true], 'Обязательное поле').required('Обязательное поле'),
+  portfolio: Yup.mixed(),
 });
 
 export const checkIsValid = (values: QuestionnarieFormType): boolean => {

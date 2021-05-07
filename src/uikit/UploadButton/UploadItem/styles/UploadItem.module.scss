@@ -1,0 +1,74 @@
+.UploadItem {
+  position: relative;
+  margin-bottom: 20px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 3px 4px;
+    width: 256px;
+    align-items: center;
+
+    &_default {
+      background-color: #e6f7ff;
+    }
+  }
+
+  &__download_default {
+    color: #8c8c8c;
+  }
+
+  &__name_default {
+    color: #1890ff;
+  }
+
+  &__close_default {
+    color: #8c8c8c;
+  }
+
+  &__download_error {
+    color: #f5222d;
+  }
+
+  &__name_error {
+    color: #f5222d;
+  }
+
+  &__close_error {
+    color: #f5222d;
+  }
+
+  &__download {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    align-self: flex-start;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  &__close {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__error {
+    position: absolute;
+    font-size: 14px;
+    line-height: 22px;
+    color: #f5222d;
+    margin-top: 8px;
+  }
+}

@@ -17,6 +17,7 @@ const initialValues: QuestionnarieFormType = {
   gender: '',
   github: '',
   isPrivacyPolicy: false,
+  portfolio: null,
 };
 
 const fakeApi = () => {

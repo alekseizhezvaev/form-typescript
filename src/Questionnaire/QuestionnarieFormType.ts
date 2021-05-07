@@ -5,4 +5,5 @@ export type QuestionnarieFormType = {
   gender: 'male' | 'female' | '';
   github?: string;
   isPrivacyPolicy: boolean;
+  portfolio: File | null;
 };
