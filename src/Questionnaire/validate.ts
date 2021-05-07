@@ -12,7 +12,7 @@ export const questionnaireFormSchema = Yup.object().shape<QuestionnarieFormType>
   email: Yup.string()
     .required('Пожалуйста укажите электронную почту')
     .email('Пожалуйста укажите электронную почту'),
-  github: Yup.string().url(),
+  github: Yup.string().url('Проверьте правильность ссылки'),
   gender: Yup.mixed()
     .oneOf(['male', 'female'] as const, 'укажите пол')
     .required('укажите пол'),
