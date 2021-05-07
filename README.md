@@ -35,3 +35,5 @@ npm run lint-fix:ts
 # or
 yarn lint-fix:ts
 ```
+
+TODO: mobile-first, animations, SCSS variables, SCSS mixins
