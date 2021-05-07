@@ -1,0 +1,14 @@
+.Radio {
+  color: #595959;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  align-items: center;
+  font-size: 14px;
+
+  .Control {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+.PolicyModal {
+  &__content {
+    margin-top: 32px;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: left;
+    width: 678px;
+    color: #262626;
+    max-height: 544px;
+    overflow-y: auto;
+  }
+}

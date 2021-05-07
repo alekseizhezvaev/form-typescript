@@ -1,0 +1,33 @@
+.FormContent {
+  max-width: 928px;
+  margin: 0 auto;
+  padding: 120px 0 88px 0;
+  display: grid;
+  place-items: start;
+
+  .Title {
+    font-size: 40px;
+  }
+
+  .Privacy {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 44px;
+    font-size: 14px;
+    align-items: center;
+    column-gap: 8px;
+    color: #595959;
+
+    & > div > span {
+      color: #1890ff;
+      cursor: pointer;
+      border-bottom: 1px solid #1890ff;
+    }
+  }
+
+  .Error {
+    color: #F5222D;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+}

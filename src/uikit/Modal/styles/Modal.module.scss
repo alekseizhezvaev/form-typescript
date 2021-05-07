@@ -1,0 +1,50 @@
+.Modal {
+  &__content {
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    padding: 40px;
+    display: grid;
+    place-items: center;
+
+    &__close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #262626;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0.4;
+  }
+}
