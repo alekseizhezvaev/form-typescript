@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write \"src/*.{json,{j,t}s{,x},scss,}\""
+    "lint-fix:ts": "eslint 'src/**/*.ts{,x}' --fix",
+    "check:ts": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{json,{j,t}s{,x},scss,}\""
   },
   "dependencies": {
     "@types/yup": "^0.29.3",

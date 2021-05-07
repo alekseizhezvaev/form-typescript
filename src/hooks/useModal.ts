@@ -29,7 +29,7 @@ export function useModal(initial: boolean = false): UseModalReturnType {
     {
       onCloseModal: useCallback(() => setIsOpen(false), [setIsOpen]),
       onOpenModal: useCallback(() => setIsOpen(true), [setIsOpen]),
-      onToggleModal: useCallback(() => setIsOpen(prev => !prev), [setIsOpen]),
+      onToggleModal: useCallback(() => setIsOpen((prev) => !prev), [setIsOpen]),
     },
   ];
 }
