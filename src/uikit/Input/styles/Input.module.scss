@@ -26,15 +26,15 @@
 
   &_default {
     color: $c_grey_70;
-    border: 1px solid #d9d9d9;
+    border: 1px solid $c_grey_30;
 
     &:hover {
-      border: 1px solid #40a9ff;
+      border: 1px solid $c_blue_40;
     }
 
     &:focus {
-      border: 1px solid #40a9ff;
-      box-shadow: 0px 0px 4px rgba(24, 144, 255, 0.5);
+      border: 1px solid $c_blue_40;
+      box-shadow: 0px 0px 4px $c_blue_80;
     }
 
     &::placeholder {
