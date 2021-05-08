@@ -1,6 +1,6 @@
 @import '@/styles/_screen-width.scss';
-@import "@/styles/_variables.scss";
-@import "@/styles/_mixins.scss";
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
 
 .UploadButton {
   @include button;
@@ -14,7 +14,7 @@
   border-radius: 2px;
   width: 256px;
   height: 40px;
-  transition: all .25s ease-in;
+  transition: all 0.25s ease-in;
   width: 100%;
   padding: 10px 8px;
 

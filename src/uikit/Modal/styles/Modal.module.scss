@@ -1,6 +1,6 @@
 @import '@/styles/_screen-width.scss';
-@import "@/styles/_variables.scss";
-@import "@/styles/_mixins.scss";
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
 
 .Modal {
   &__content {
@@ -54,11 +54,11 @@
   }
 
   &_mount {
-    animation: inAnimation .25ms;
+    animation: inAnimation 0.25ms;
   }
 
   &_unmount {
-    animation: outAnimation .25ms
+    animation: outAnimation 0.25ms;
   }
 }
 
