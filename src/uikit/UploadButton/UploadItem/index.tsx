@@ -25,6 +25,7 @@ export const UploadItem: React.FC<PropsUploadItem> = ({
       <div
         className={cn(styles.UploadItem__container, {
           [styles.UploadItem__container_default]: !isError,
+          [styles.UploadItem__hover]: !isError,
         })}
       >
         <button

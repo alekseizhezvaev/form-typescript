@@ -12,13 +12,16 @@
     padding: 3px 4px;
     width: 100%;
     align-items: center;
+    transition: all 0.25s ease-in;
 
     @media (min-width: $mobile-width) {
       max-width: 256px;
     }
+  }
 
-    &_default {
-      background-color: $c_grey_10;
+  &__hover {
+    &:hover {
+      background-color: $c_blue_10;
     }
   }
 
@@ -28,6 +31,10 @@
 
   &__name_default {
     color: $c_blue_50;
+
+    &:active {
+      color: $c_blue_80;
+    }
   }
 
   &__close_default {
