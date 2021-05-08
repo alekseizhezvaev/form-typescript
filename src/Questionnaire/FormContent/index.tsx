@@ -30,6 +30,7 @@ export const FormContent: React.FC = () => {
           placeholder="Имя"
           type="text"
         />
+
         <FieldInput<QuestionnarieFormType>
           label="Фамилия *"
           name="lastName"
@@ -93,7 +94,11 @@ export const FormContent: React.FC = () => {
         </div>
       </div>
 
-      <Button isDisabled={!checkIsValid(values)} isLoading={isSubmitting} type="submit">
+      <Button
+        isDisabled={!checkIsValid(values) || isSubmitting}
+        isLoading={isSubmitting}
+        type="submit"
+      >
         Отправить
       </Button>
 

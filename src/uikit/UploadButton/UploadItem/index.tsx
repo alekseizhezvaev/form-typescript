@@ -36,6 +36,7 @@ export const UploadItem: React.FC<PropsUploadItem> = ({
           type="button"
         >
           <IconPaperclip />
+
           <div
             className={cn(styles.UploadItem__name, {
               [styles.UploadItem__name_default]: !isError,
@@ -45,6 +46,7 @@ export const UploadItem: React.FC<PropsUploadItem> = ({
             {fileName}
           </div>
         </button>
+
         <button
           className={cn(styles.UploadItem__close, {
             [styles.UploadItem__close_default]: !isError,
