@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { useFormikContext } from 'formik';
+import { scrollToTop } from 'src/helpers/scrollToTop';
 
 import { FieldCheckbox } from '../../formikControls/FieldCheckbox';
 import { FieldInput } from '../../formikControls/FieldInput';
@@ -18,6 +19,11 @@ import { PrivacyModal } from './PrivacyModal';
 export const FormContent: React.FC = () => {
   const { values, isSubmitting } = useFormikContext<QuestionnarieFormType>();
   const [modalFlag, modalHandler] = useModal(false);
+
+  const handleClickPrivacy = useCallback(() => {
+    scrollToTop();
+    modalHandler.onOpenModal();
+  }, [modalHandler]);
 
   return (
     <div className={styles.FormContent}>
@@ -88,7 +94,7 @@ export const FormContent: React.FC = () => {
 
         <div>
           * Я согласен с{' '}
-          <span className={styles.FormContent__privacy__button} onClick={modalHandler.onOpenModal}>
+          <span className={styles.FormContent__privacy__button} onClick={handleClickPrivacy}>
             политикой конфиденциальности
           </span>
         </div>

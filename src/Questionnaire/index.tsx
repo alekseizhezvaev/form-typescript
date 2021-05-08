@@ -2,6 +2,7 @@ import React from 'react';
 import { useCallback } from 'react';
 
 import { Form, Formik, FormikConfig } from 'formik';
+import { scrollToTop } from 'src/helpers/scrollToTop';
 
 import { useModal } from '../hooks/useModal';
 
@@ -35,6 +36,7 @@ export const Questionnaire: React.FC = () => {
       setSubmitting(true);
       await fakeApi();
       setSubmitting(false);
+      scrollToTop();
       modalHandler.onOpenModal();
     },
     [modalHandler]
