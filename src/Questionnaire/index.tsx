@@ -48,7 +48,7 @@ export const Questionnaire: React.FC = () => {
     >
       <Form>
         <FormContent />
-        {modalFlag ? <FormModal onCloseModal={modalHandler.onCloseModal} /> : null}
+        <FormModal onCloseModal={modalHandler.onCloseModal} isOpen={modalFlag} />
       </Form>
     </Formik>
   );

@@ -24,7 +24,7 @@
       padding: 0;
       width: 24px;
       height: 24px;
-      color: #2F80ED;
+      color: #2f80ed;
 
       @media (min-width: 481px) {
         top: 40px;
@@ -57,5 +57,31 @@
     left: 0;
     background: #000000;
     opacity: 0.4;
+  }
+
+  &_mount {
+    animation: inAnimation 250ms;
+  }
+
+  &_unmount {
+    animation: outAnimation 250ms
+  }
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

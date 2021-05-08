@@ -9,9 +9,10 @@ import styles from './styles/PrivacyModal.module.scss';
 
 type Props = {
   onCloseModal: VoidFunction;
+  isOpen: boolean;
 };
 
-export const PrivacyModal: React.FC<Props> = ({ onCloseModal }) => {
+export const PrivacyModal: React.FC<Props> = ({ onCloseModal, isOpen }) => {
   const { setFieldValue } = useFormikContext<QuestionnarieFormType>();
 
   const handleSetPolicy = useCallback(() => {
@@ -25,6 +26,7 @@ export const PrivacyModal: React.FC<Props> = ({ onCloseModal }) => {
       hasCloseButton
       title="Политика конфиденциальности"
       onActionClick={handleSetPolicy}
+      isOpen={isOpen}
     >
       <div className={styles.PrivacyModal__content}>
         <b>1. Общие положения</b>

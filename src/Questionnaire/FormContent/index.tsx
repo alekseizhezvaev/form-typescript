@@ -97,7 +97,7 @@ export const FormContent: React.FC = () => {
         Отправить
       </Button>
 
-      {modalFlag ? <PrivacyModal onCloseModal={modalHandler.onCloseModal} /> : null}
+      <PrivacyModal onCloseModal={modalHandler.onCloseModal} isOpen={modalFlag} />
     </div>
   );
 };
