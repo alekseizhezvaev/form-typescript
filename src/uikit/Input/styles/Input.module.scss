@@ -6,7 +6,15 @@
   outline: none;
   transition: all 0.3s ease-in;
   border-radius: 2px;
-  width: 256px;
+  width: 100%;
+  
+  @media (min-width: 481px) {
+    max-width: 256px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 256px;
+  }
 
   &__container {
     font-size: 14px;

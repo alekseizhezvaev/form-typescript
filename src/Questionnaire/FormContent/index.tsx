@@ -58,16 +58,19 @@ export const FormContent: React.FC = () => {
           </div>
         }
       >
-        <FieldRadio<QuestionnarieFormType, QuestionnarieFormType['gender']>
-          label="Мужской"
-          name="gender"
-          value="male"
-        />
-        <FieldRadio<QuestionnarieFormType, QuestionnarieFormType['gender']>
-          label="Женский"
-          name="gender"
-          value="female"
-        />
+        <div className={styles.FormContent__formItem__items}>
+          <FieldRadio<QuestionnarieFormType, QuestionnarieFormType['gender']>
+            label="Мужской"
+            name="gender"
+            value="male"
+          />
+
+          <FieldRadio<QuestionnarieFormType, QuestionnarieFormType['gender']>
+            label="Женский"
+            name="gender"
+            value="female"
+          />
+        </div>
       </FormItem>
 
       <FormItem title="Github">

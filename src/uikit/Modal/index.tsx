@@ -8,6 +8,7 @@ import styles from './styles/Modal.module.scss';
 
 type Props = {
   actionButtonText: string;
+  hasCloseButton?: boolean;
   onCloseModal: VoidFunction;
   onActionClick?: VoidFunction;
   title: string;
@@ -19,6 +20,7 @@ export const Modal: React.FC<Props> = ({
   title,
   actionButtonText,
   onActionClick,
+  hasCloseButton,
 }) => {
   const { Portal } = usePortal();
 
@@ -37,9 +39,12 @@ export const Modal: React.FC<Props> = ({
 
         <div className={styles.Modal__container}>
           <div className={styles.Modal__content}>
-            <button className={styles.Modal__content__close} onClick={onCloseModal} type="button">
-              <IconClose />
-            </button>
+            {hasCloseButton ? (
+              <button className={styles.Modal__content__close} onClick={onCloseModal} type="button">
+                <IconClose />
+              </button>
+            ) : null}
+
             <div className={styles.Modal__content__title}>{title}</div>
             <div className={styles.Modal__content__main}>{children}</div>
             <Button onClick={handleClick}>{actionButtonText}</Button>

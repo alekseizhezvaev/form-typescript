@@ -1,6 +1,5 @@
 .Button {
   margin-top: 45px;
-  width: 360px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -12,6 +11,11 @@
   color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease-in;
+  width: 100%;
+
+  @media (min-width: 481px) {
+    width: 360px;
+  }
 
   &:disabled {
     cursor: auto;

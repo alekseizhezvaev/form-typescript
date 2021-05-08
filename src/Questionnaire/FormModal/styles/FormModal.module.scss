@@ -5,6 +5,10 @@
     line-height: 38px;
     text-align: center;
     color: #262626;
-    width: 490px;
+    width: 260px;
+
+    @media (min-width: 481px) {
+      width: 490px;
+    }
   }
 }

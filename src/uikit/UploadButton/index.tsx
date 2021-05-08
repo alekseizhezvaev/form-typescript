@@ -72,10 +72,12 @@ export const UploadButton: React.FC<Props> = ({ onBlur, onChange, value }) => {
   ) : (
     <button {...getRootProps()} className={styles.UploadButton} type="button">
       <input {...getInputProps()} onBlur={onBlur} />
-      <div className={styles.UploadButton__icon}>
-        <IconPlus />
+      <div className={styles.UploadButton__content}>
+        <div className={styles.UploadButton__icon}>
+          <IconPlus />
+        </div>
+        Загрузить резюме
       </div>
-      Загрузить резюме
     </button>
   );
 };
