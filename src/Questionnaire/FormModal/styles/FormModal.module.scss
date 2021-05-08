@@ -1,13 +1,16 @@
+@import '@/styles/_screen-width.scss';
+@import "@/styles/_variables.scss";
+
 .FormModal {
   &__content {
     margin-top: 8px;
     font-size: 20px;
     line-height: 38px;
     text-align: center;
-    color: #262626;
+    color: $c_grey_100;
     min-width: 300px;
 
-    @media (min-width: 481px) {
+    @media (min-width: $mobile-width) {
       width: 490px;
     }
   }

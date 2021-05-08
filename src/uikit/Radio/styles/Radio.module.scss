@@ -1,10 +1,12 @@
+@import "@/styles/_variables.scss";
+
 .Radio {
   width: 16px;
   height: 16px;
   cursor: pointer;
 
   &__container {
-    color: #595959;
+    color: $c_grey_70;
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 8px;

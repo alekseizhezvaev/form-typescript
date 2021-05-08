@@ -1,12 +1,15 @@
+@import '@/styles/_screen-width.scss';
+@import "@/styles/_variables.scss";
+
 .FormContent {
   display: grid;
   padding: 60px 16px;
 
-  @media (min-width: 481px) {
+  @media (min-width: $mobile-width) {
     place-items: start;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     padding: 120px 0 88px 0;
     place-items: start;
     max-width: 928px;
@@ -17,7 +20,7 @@
     font-size: 40px;
     max-width: 250px;
 
-    @media (min-width: 376px) {
+    @media (min-width: $mobile-width) {
       max-width: none;
     }
   }
@@ -29,18 +32,18 @@
     font-size: 14px;
     align-items: center;
     column-gap: 8px;
-    color: #595959;
+    color: $c_grey_70;
 
     &__button {
-      color: #1890ff;
+      color: $c_blue_50;
       cursor: pointer;
-      border-bottom: 1px solid #1890ff;
+      border-bottom: 1px solid $c_blue_50;
     }
   }
 
   &__formItem {
     &__error {
-      color: #f5222d;
+      color: $c_red_60;
       font-size: 14px;
       margin-left: 8px;
     }

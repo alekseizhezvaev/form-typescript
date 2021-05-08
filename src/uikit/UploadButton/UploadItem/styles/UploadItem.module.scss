@@ -1,3 +1,7 @@
+@import "@/styles/_variables.scss";
+@import '@/styles/_screen-width.scss';
+@import '@/styles/_mixins.scss';
+
 .UploadItem {
   position: relative;
   margin-bottom: 20px;
@@ -9,43 +13,41 @@
     width: 100%;
     align-items: center;
 
-    @media (min-width: 481px) {
+    @media (min-width: $mobile-width) {
       max-width: 256px;
     }
 
     &_default {
-      background-color: #e6f7ff;
+      background-color: $c_grey_10;
     }
   }
 
   &__download_default {
-    color: #8c8c8c;
+    color: $c_grey_50;
   }
 
   &__name_default {
-    color: #1890ff;
+    color: $c_blue_50;
   }
 
   &__close_default {
-    color: #8c8c8c;
+    color: $c_grey_50;
   }
 
   &__download_error {
-    color: #f5222d;
+    color: $c_red_60;
   }
 
   &__name_error {
-    color: #f5222d;
+    color: $c_red_60;
   }
 
   &__close_error {
-    color: #f5222d;
+    color: $c_red_60;
   }
 
   &__download {
-    outline: none;
-    border: none;
-    cursor: pointer;
+    @include button;
     background: transparent;
     padding: 0;
     display: flex;
@@ -59,9 +61,7 @@
   }
 
   &__close {
-    outline: none;
-    border: none;
-    cursor: pointer;
+    @include button;
     background: transparent;
     padding: 0;
     width: 16px;
@@ -72,7 +72,7 @@
     position: absolute;
     font-size: 14px;
     line-height: 22px;
-    color: #f5222d;
+    color: $c_red_60;
     margin-top: 8px;
   }
 }

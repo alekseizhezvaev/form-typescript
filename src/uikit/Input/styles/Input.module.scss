@@ -1,18 +1,21 @@
+@import "@/styles/_variables.scss";
+@import '@/styles/_screen-width.scss';
+
 .Input {
   font-size: 16px;
   margin-top: 2px;
   padding: 8px 12px;
   height: 40px;
   outline: none;
-  transition: all 0.3s ease-in;
+  transition: all .25s ease-in;
   border-radius: 2px;
   width: 100%;
-  
-  @media (min-width: 481px) {
+
+  @media (min-width: $mobile-width) {
     max-width: 256px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     width: 256px;
   }
 
@@ -22,7 +25,7 @@
   }
 
   &_default {
-    color: #595959;
+    color: $c_grey_70;
     border: 1px solid #d9d9d9;
 
     &:hover {
@@ -35,17 +38,17 @@
     }
 
     &::placeholder {
-      color: #bfbfbf;
+      color: $c_grey_40;
     }
   }
 
   &_error {
-    border: 1px solid #f5222d;
-    color: #f5222d;
+    border: 1px solid $c_red_60;
+    color: $c_red_60;
 
     &:focus {
-      border: 1px solid #f5222d;
-      box-shadow: 0px 0px 4px rgba(245, 34, 45, 0.5);
+      border: 1px solid $c_red_60;
+      box-shadow: 0px 0px 4px $c_red-80;
     }
   }
 
@@ -53,6 +56,6 @@
     position: absolute;
     left: 0;
     top: 100%;
-    color: #f5222d;
+    color: $c_red_60;
   }
 }
