@@ -50,15 +50,15 @@
   &__overlay {
     @include overlay;
     background-color: $c_grey_black;
-    opacity: .4;
+    opacity: 0.4;
   }
 
   &_mount {
-    animation: inAnimation .25s;
+    animation: inAnimation 0.25s;
   }
 
   &_unmount {
-    animation: outAnimation .25s;
+    animation: outAnimation 0.25s;
   }
 }
 
