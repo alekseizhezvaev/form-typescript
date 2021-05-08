@@ -58,6 +58,10 @@
     align-self: flex-start;
     font-size: 14px;
     margin-left: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
   }
 
   &__close {
