@@ -56,7 +56,7 @@ export const Modal: React.FC<Props> = ({
 
           <div className={styles.Modal__container}>
             <div className={styles.Modal__content}>
-              <button className={styles.Modal__content__close} onClick={onCloseModal} type="button">
+              <button className={styles.Modal__content__close} onClick={handleClick} type="button">
                 <IconClose />
               </button>
 
