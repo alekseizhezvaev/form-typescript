@@ -23,7 +23,6 @@ export const PrivacyModal: React.FC<Props> = ({ onCloseModal, isOpen }) => {
     <Modal
       onCloseModal={onCloseModal}
       actionButtonText="Я согласен"
-      hasCloseButton
       title="Политика конфиденциальности"
       onActionClick={handleSetPolicy}
       isOpen={isOpen}
