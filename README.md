@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Stack: TypeScript, CSS-modules + SCSS.
+Stack: TypeScript, CSS-modules+SCSS.
 
 In this project, a form is implemented using the [Formik](https://formik.org/docs/overview) library, and form validation is also used.
 Implemented file upload using [react-dropzone](https://react-dropzone.js.org/).
